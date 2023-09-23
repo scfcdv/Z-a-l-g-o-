@@ -1,0 +1,25 @@
+<link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
+    <title>Z̠͔̬̰̣͎̯͕̥͎̖̥͎͈͍͕̣̫͙͓͎̥̮͈̖͚͔̮̘͎̭͍̙̞̗͔̭̦͈̤͈͇͙̪͇̜̙a̦̣̠̠͙̱͔͉͈̣̘̪̯̭l̞̮̭͇̯̭̤̬̱͔̯͇̫̭̱̰̱̩̦̦͇͍̗̝͇͉͚͈̤̣̮̬̩̞̭̤̥͖̜̬g̙͖͎̦̦̗͖̠͇͇̜̦̩̘͈̦̱̝̜͎̣̯̮̝̖̘͉̤o̝͕͔̠̠̤͈͎̣͔̖̙͙̮テキスト変換</title>
+    <input type="text" id="inputText" placeholder="E͇̮͕n͍̦̭̤͙͈͔͙̟̥͙̖̖̰͉͓̬̦̰̪̯͍̞̙̯̘̖͈͕̥͚̞͙̟͍̰̯͉̤͖̯̦̜̦t̯̫͖̥͕͉͔͇͚͚̬̥̱̰͖͈̖͚̖̠̯̮͚̣̩̱͎̜͍̮̯̪͙̬̭͎͔̘̤̠ẹ͍͔͖͎̤̦̞r͖̮̟̫͙̞͚̱̬͙̣͖̪̝̩͚͍̖̘̱͇̝̟͉̗̩̮͎͕̰̖̭͓͉̖͓ ͍̜̪̮͖̫̫̘̩͎̝̥̘̣̤̗̮̱̞̥̯̬̱͔̦͖͙͔̝y͇̖̪̤̟̝̖̪̞̩̬̣̱̪̙̮͕̠̞͓͔͎̰̮o̯͉̦̗͓̗̯͔̜̭̝̟̯̩̮̞̥̝͕̠͓̮͕͇̮͍̩̟̣̟̟̰̰͙͓̘͈͙͖͖u̞̰̗̣̗̙̣̭̯̯̱̪̙̬̥̫̯͎̟̫͔͕̘͙̗̣͔̝͈̱̭̫̗̜͓̝̟̬r ̯͈̥͇͚͎̜͚̰̰̭̤̬͍̣͕̦̝t͚̮̜͈̜̖̬̬͖̣͎̦̭̟̦̱̯̠͎̥̖͍̟̗̘̫͎̣̯͉̪̞̠͚͙̝̭͈͖̟̪͙̫̘̟̪̠̱͎e̩̣̱͍̰͎̗̖͖x͓̪̭t̤̘̰͎̦̘̥̫͈̥̣ ̙̰̣̠̝͍̦͔̞̤̝̩̝̬̤̪̮͉͕̰̞̠̣̞̞͓͚͎̬̤̱̮̥͚͔̘̤̦̞h̩̗̥̰̞e̠͔̟͖͖͖̥̟͍͍͉̪̭͉r̞͔̙̮̞͖̰̟̙̬͈͈̯͍̖͓̖̦̟̘͓͕̠̠͚͔͇͈̰͓͚̭͉͉͓̙e͔̱̫̖͙̪͚͔͚̱͍̰͍͈̪̫̟͕̖͍͚̘̥̠͓̱̟̪̘̱̦͈͕">
+    <button onclick="convertToZalgo()">変換</button>
+    <p id="outputText"></p>
+    <script>
+        function convertToZalgo() {
+            var inputText = document.getElementById('inputText').value;
+            var outputText = '';
+            for (var i = 0; i < inputText.length; i++) {
+                outputText += addZalgo() + inputText[i];
+            }
+            document.getElementById('outputText').innerHTML = outputText;
+        }
+
+        function addZalgo() {
+            var zalgo_chars = ['̖', '̗', '̘', '̙', '̜', '̝', '̞', '̟', '̠', '̣', '̤', '̥', '̦', '̩', '̪', '̫', '̬', '̭', '̮', '̯', '̰', '̱', '͇', '͈', '͉', '͍', '͎', '͓', '͔', '͕', '͖', '͙', '͚'];
+            var num_chars = Math.floor(Math.random() * 100);
+            var zalgo_text = '';
+            for (var j = 0; j < num_chars; j++) {
+                zalgo_text += zalgo_chars[Math.floor(Math.random() * zalgo_chars.length)];
+            }
+            return zalgo_text;
+        }
+    </script>
